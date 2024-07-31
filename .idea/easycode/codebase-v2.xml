@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/src/main/java/web/config/AppInit.java;/Users/dmitriyfromrussia/IdeaProjects/PP_2_2_2_spring-mvc/src/main/java/web/config/WebConfig.java;/Users/dmitriyfromrussia/IdeaProjects/PP_2_2_2_spring-mvc/src/main/java/web/controller/CarsController.java;/Users/dmitriyfromrussia/IdeaProjects/PP_2_2_2_spring-mvc/src/main/java/web/controller/HelloController.java;/Users/dmitriyfromrussia/IdeaProjects/PP_2_2_2_spring-mvc/src/main/java/web/dao/CarDAO.java;/Users/dmitriyfromrussia/IdeaProjects/PP_2_2_2_spring-mvc/src/main/java/web/model/Car.java;/Users/dmitriyfromrussia/IdeaProjects/PP_2_2_2_spring-mvc/src/main/java/web/Main.java;/Users/dmitriyfromrussia/IdeaProjects/PP_2_2_2_spring-mvc/src/webapp/WEB-INF/pages/Cars.html;/Users/dmitriyfromrussia/IdeaProjects/PP_2_2_2_spring-mvc/src/webapp/WEB-INF/pages/index.html;/Users/dmitriyfromrussia/IdeaProjects/PP_2_2_2_spring-mvc/pom.xml" />
+  </component>
+</project>
