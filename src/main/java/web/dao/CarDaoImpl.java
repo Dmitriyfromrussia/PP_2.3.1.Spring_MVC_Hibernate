@@ -2,19 +2,20 @@ package web.dao;
 
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-public class CarDAO {
+@Repository // @Component NB РАЗОБРАТЬСЯя!!!!!
+public class CarDaoImpl implements CarDao{
 
-    private static int CAR_COUNT; // это все можно полодить в класс DAO
+    private static int CAR_COUNT;
 
     private List<Car> cars;
 
-    // такой интересный блок инициализвции юзану, не понял, почему без него не работает
+
     {
         cars = new ArrayList<>();
         cars.add(new Car(++CAR_COUNT, "Lada", "Granta")); // или ++CAR_COUNT
@@ -25,14 +26,14 @@ public class CarDAO {
     }
 
 
-    public List<Car> printCars(int id) { // возвращаем часть списка по ID
+    public List<Car> getCarsByCount(int count) { // возвращаем часть списка по ID
         List<Car> response = new ArrayList<>();
-        if (id >= 5 & !cars.isEmpty()) {
+        if (count >= 5 & !cars.isEmpty()) {
             return cars;
         }
         if (!cars.isEmpty()) {
             for (Car car : cars) {
-                if (car.getCarId() <= id) {
+                if (car.getCarId() <= count) {
                     response.add(car);
                 }
             }

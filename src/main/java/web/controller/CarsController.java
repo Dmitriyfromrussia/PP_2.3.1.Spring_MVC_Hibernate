@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import web.dao.CarDAO;
+import web.dao.CarDaoImpl;
 import web.model.Car;
 
 import java.util.List;
@@ -14,16 +14,16 @@ import java.util.List;
 @Controller
 public class CarsController {
 
-    private CarDAO carDAO; //может быть лучше прописать "Autowired в нем и не добавлять конструктор ниже
+    private CarDaoImpl carDaoImpl;
 
-    public CarsController(@Autowired CarDAO carDAO) { // поидее можно не указывать аннотацию
-        this.carDAO = carDAO;
+    public CarsController(@Autowired CarDaoImpl carDaoImpl) { // поидее можно не указывать аннотацию
+        this.carDaoImpl = carDaoImpl;
     }
 
     @GetMapping("/cars")
     public String printCar(@RequestParam(value = "count", required = false) Integer count, Model model) {
 
-        List<Car> cars = carDAO.printCars(count);
+        List<Car> cars = carDaoImpl.getCarsByCount(count);
 
         if (!cars.isEmpty()) {
             model.addAttribute("TableMessage", "This is list of cars");
